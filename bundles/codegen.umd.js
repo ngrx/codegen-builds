@@ -32,6 +32,10 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     }
 };
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} props
  * @return {?}
  */
@@ -42,12 +46,20 @@ function getOptionalProperties(props) {
     }); });
 }
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} node
  * @return {?}
  */
 function getProperties(node) {
     return node.members.filter(typescript.isPropertySignature);
 }
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} props
  * @return {?}
@@ -65,6 +77,10 @@ function getRequiredProperties(props) {
     });
 }
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} action
  * @return {?}
  */
@@ -74,10 +90,13 @@ function getType(action) {
         return undefined;
     }
     return typescript.isLiteralTypeNode(/** @type {?} */ (typeProperty.type))
-        ? (typeProperty.type)
-        : undefined;
+        ? (typeProperty.type) : undefined;
     // return !!typeProperty && ts.isLiteralTypeNode(typeProperty.type) ? typeProperty.type : undefined;
 }
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} statement
  * @return {?}
@@ -87,16 +106,20 @@ function isActionDescendent(statement) {
     if (heritageClauses) {
         return heritageClauses.some(function (clause) {
             /**
-             * TODO: This breaks if the interface looks like this:
-             *
-             *   interface MyAction extends ngrx.Action { }
-             *
-             */
+                   * TODO: This breaks if the interface looks like this:
+                   *
+                   *   interface MyAction extends ngrx.Action { }
+                   *
+                   */
             return clause.types.some(function (type) { return type.expression.getText() === 'Action'; });
         });
     }
     return false;
 }
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} node
  * @return {?}
@@ -118,6 +141,20 @@ function isTopLevel(node) {
 function isExported(node) {
     return hasExportModifier(node) && isTopLevel(node);
 }
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @record
+ */
+/**
+ * @record
+ */
 var actionTypeRegex = new RegExp(/\[(.*?)\](.*)/);
 /**
  * @param {?} type
@@ -143,6 +180,10 @@ var getActionUnionName = lodash.flow(getActionCategoryToken, function (v) { retu
 var getActionLookupName = lodash.flow(getActionCategoryToken, function (v) { return v + "ActionLookup"; });
 var getActionFactoryName = lodash.flow(getActionName, lodash.camelCase, lodash.upperFirst, function (v) { return "create" + v; });
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} action
  * @return {?}
  */
@@ -160,6 +201,10 @@ function printActionFactoryDeclaration(action) {
     ], true));
 }
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} actions
  * @return {?}
  */
@@ -176,6 +221,10 @@ function printEnumDeclaration(actions) {
     }));
 }
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} filename
  * @param {?} actions
  * @return {?}
@@ -185,6 +234,10 @@ function printImportDeclaration(filename, actions) {
         .map(getActionName)
         .map(function (name) { return typescript.createImportSpecifier(undefined, typescript.createIdentifier(name)); }))), typescript.createIdentifier("'./" + filename + "'"));
 }
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} actions
  * @return {?}
@@ -196,6 +249,10 @@ function printTypeDictionaryDeclaration(actions) {
     })));
 }
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} actions
  * @return {?}
  */
@@ -205,6 +262,17 @@ function printTypeUnionDeclaration(actions) {
         .map(getActionName)
         .map(function (name) { return typescript.createTypeReferenceNode(name, undefined); })));
 }
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @record
+ */
 /**
  * @param {?} fileName
  * @param {?} sourceFile
@@ -242,6 +310,10 @@ function printActionFactory(ast) {
         .map(function (statement) { return printer.printNode(typescript.EmitHint.Unspecified, statement, resultFile); })
         .join('\n\n');
 }
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 var glob = require('glob');
 /**
  * @param {?} globPattern
@@ -275,6 +347,10 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 var ora = require('ora');
 /**
  * @param {?} file

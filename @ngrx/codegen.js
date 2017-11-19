@@ -4,6 +4,10 @@ import { EmitHint, ModifierFlags, NewLineKind, ScriptKind, ScriptTarget, SyntaxK
 import { camelCase, flow, snakeCase, trim, upperFirst } from 'lodash';
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} props
  * @return {?}
  */
@@ -15,6 +19,10 @@ function getOptionalProperties(props) {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} node
  * @return {?}
  */
@@ -22,6 +30,10 @@ function getProperties(node) {
     return node.members.filter(isPropertySignature);
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} props
  * @return {?}
@@ -37,6 +49,10 @@ function getRequiredProperties(props) {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} action
  * @return {?}
  */
@@ -46,11 +62,14 @@ function getType(action) {
         return undefined;
     }
     return isLiteralTypeNode(/** @type {?} */ (typeProperty.type))
-        ? (typeProperty.type)
-        : undefined;
+        ? /** @type {?} */ (typeProperty.type) : undefined;
     // return !!typeProperty && ts.isLiteralTypeNode(typeProperty.type) ? typeProperty.type : undefined;
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} statement
  * @return {?}
@@ -60,17 +79,21 @@ function isActionDescendent(statement) {
     if (heritageClauses) {
         return heritageClauses.some(clause => {
             /**
-             * TODO: This breaks if the interface looks like this:
-             *
-             *   interface MyAction extends ngrx.Action { }
-             *
-             */
+                   * TODO: This breaks if the interface looks like this:
+                   *
+                   *   interface MyAction extends ngrx.Action { }
+                   *
+                   */
             return clause.types.some(type => type.expression.getText() === 'Action');
         });
     }
     return false;
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} node
  * @return {?}
@@ -92,6 +115,23 @@ function isTopLevel(node) {
 function isExported(node) {
     return hasExportModifier(node) && isTopLevel(node);
 }
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @record
+ */
+
+/**
+ * @record
+ */
 
 const actionTypeRegex = new RegExp(/\[(.*?)\](.*)/);
 /**
@@ -119,6 +159,10 @@ const getActionLookupName = flow(getActionCategoryToken, v => `${v}ActionLookup`
 const getActionFactoryName = flow(getActionName, camelCase, upperFirst, v => `create${v}`);
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} action
  * @return {?}
  */
@@ -136,6 +180,10 @@ function printActionFactoryDeclaration(action) {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} actions
  * @return {?}
  */
@@ -152,6 +200,10 @@ function printEnumDeclaration(actions) {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} filename
  * @param {?} actions
  * @return {?}
@@ -162,6 +214,10 @@ function printImportDeclaration(filename, actions) {
         .map(name => createImportSpecifier(undefined, createIdentifier(name))))), createIdentifier(`'./${filename}'`));
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * @param {?} actions
  * @return {?}
@@ -174,6 +230,10 @@ function printTypeDictionaryDeclaration(actions) {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} actions
  * @return {?}
  */
@@ -183,6 +243,19 @@ function printTypeUnionDeclaration(actions) {
         .map(getActionName)
         .map(name => createTypeReferenceNode(name, undefined))));
 }
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @record
+ */
 
 /**
  * @param {?} fileName
@@ -226,6 +299,10 @@ function printActionFactory(ast) {
         .join('\n\n');
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 const glob = require('glob');
 /**
  * @param {?} globPattern
@@ -250,6 +327,10 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 const ora = require('ora');
 /**
  * @param {?} file
@@ -319,13 +400,27 @@ function codegen(glob) {
                 yield writeFile$1(target, output);
                 indicator.succeed(`Found ${ast.length} actions in ${file}`);
             }
-            catch (e) {
-                indicator.fail(((e)).message);
+            catch (/** @type {?} */ e) {
+                indicator.fail((/** @type {?} */ (e)).message);
             }
         }
     });
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Generated bundle index. Do not edit.
  */

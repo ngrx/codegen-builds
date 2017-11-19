@@ -1,4 +1,30 @@
-import * as _ from 'lodash';
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import * as _ from "lodash";
+/**
+ * @record
+ */
+export function ActionInterfaceProperty() { }
+function ActionInterfaceProperty_tsickle_Closure_declarations() {
+    /** @type {?} */
+    ActionInterfaceProperty.prototype.name;
+    /** @type {?} */
+    ActionInterfaceProperty.prototype.required;
+}
+/**
+ * @record
+ */
+export function ActionInterface() { }
+function ActionInterface_tsickle_Closure_declarations() {
+    /** @type {?} */
+    ActionInterface.prototype.name;
+    /** @type {?} */
+    ActionInterface.prototype.actionType;
+    /** @type {?} */
+    ActionInterface.prototype.properties;
+}
 const /** @type {?} */ actionTypeRegex = new RegExp(/\[(.*?)\](.*)/);
 /**
  * @param {?} type

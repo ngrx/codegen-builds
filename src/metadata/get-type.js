@@ -1,5 +1,9 @@
-import * as ts from 'typescript';
-import { getProperties } from './get-properties';
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import * as ts from "typescript";
+import { getProperties } from "./get-properties";
 /**
  * @param {?} action
  * @return {?}
@@ -10,8 +14,7 @@ export function getType(action) {
         return undefined;
     }
     return ts.isLiteralTypeNode(/** @type {?} */ (typeProperty.type))
-        ? (typeProperty.type)
-        : undefined;
+        ? /** @type {?} */ (typeProperty.type) : undefined;
     // return !!typeProperty && ts.isLiteralTypeNode(typeProperty.type) ? typeProperty.type : undefined;
 }
 //# sourceMappingURL=get-type.js.map

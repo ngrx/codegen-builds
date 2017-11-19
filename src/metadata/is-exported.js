@@ -1,4 +1,8 @@
-import * as ts from 'typescript';
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import * as ts from "typescript";
 /**
  * @param {?} node
  * @return {?}

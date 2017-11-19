@@ -1,5 +1,9 @@
-import * as ts from 'typescript';
-import { getActionName, getActionUnionName, } from '../action-interface';
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import * as ts from "typescript";
+import { getActionName, getActionUnionName, } from "../action-interface";
 /**
  * @param {?} actions
  * @return {?}

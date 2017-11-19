@@ -1,4 +1,8 @@
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @param {?} statement
  * @return {?}
  */
@@ -7,11 +11,11 @@ export function isActionDescendent(statement) {
     if (heritageClauses) {
         return heritageClauses.some(clause => {
             /**
-             * TODO: This breaks if the interface looks like this:
-             *
-             *   interface MyAction extends ngrx.Action { }
-             *
-             */
+                   * TODO: This breaks if the interface looks like this:
+                   *
+                   *   interface MyAction extends ngrx.Action { }
+                   *
+                   */
             return clause.types.some(type => type.expression.getText() === 'Action');
         });
     }

@@ -1,3 +1,7 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 const /** @type {?} */ glob = require('glob');
 /**
  * @param {?} globPattern

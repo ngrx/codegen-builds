@@ -6,11 +6,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import * as fs from 'fs';
-import * as path from 'path';
-import * as ts from 'typescript';
-import { collectMetadata, printActionFactory } from './collect-metadata';
-import { findFiles } from './find-files';
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import * as fs from "fs";
+import * as path from "path";
+import * as ts from "typescript";
+import { collectMetadata, printActionFactory } from "./collect-metadata";
+import { findFiles } from "./find-files";
 const /** @type {?} */ ora = require('ora');
 /**
  * @param {?} file
@@ -80,8 +84,8 @@ export function codegen(glob) {
                 yield writeFile(target, output);
                 indicator.succeed(`Found ${ast.length} actions in ${file}`);
             }
-            catch (e) {
-                indicator.fail(((e)).message);
+            catch (/** @type {?} */ e) {
+                indicator.fail((/** @type {?} */ (e)).message);
             }
         }
     });

@@ -1,7 +1,23 @@
-import * as ts from 'typescript';
-import * as _ from 'lodash';
-import * as collector from './metadata/index';
-import * as printers from './printers/index';
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import * as ts from "typescript";
+import * as _ from "lodash";
+import * as collector from "./metadata/index";
+import * as printers from "./printers/index";
+/**
+ * @record
+ */
+export function ActionMetadata() { }
+function ActionMetadata_tsickle_Closure_declarations() {
+    /** @type {?} */
+    ActionMetadata.prototype.name;
+    /** @type {?} */
+    ActionMetadata.prototype.type;
+    /** @type {?} */
+    ActionMetadata.prototype.properties;
+}
 /**
  * @param {?} fileName
  * @param {?} sourceFile
