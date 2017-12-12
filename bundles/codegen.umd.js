@@ -90,7 +90,8 @@ function getType(action) {
         return undefined;
     }
     return typescript.isLiteralTypeNode(/** @type {?} */ (typeProperty.type))
-        ? (typeProperty.type) : undefined;
+        ? ((typeProperty.type))
+        : undefined;
     // return !!typeProperty && ts.isLiteralTypeNode(typeProperty.type) ? typeProperty.type : undefined;
 }
 /**
